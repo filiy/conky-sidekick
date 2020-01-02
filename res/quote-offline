@@ -1,0 +1,28 @@
+#!/bin/bash
+ 
+# Keep this updated when you add or take away quotes on the case list
+num_quotes=13
+ 
+# Generate a random quote number variable, 'rand'
+rand=$[ ( $RANDOM % $num_quotes ) + 1 ]
+case $rand in  #BEGIN CASE
+        1) quote="Rule your mind or it will rule you";;
+        2) quote="Don't let yesterday take up too much of today.";;
+        3) quote="People who are crazy enough to think they can change the world, are the ones who do.";;
+        4) quote="A smooth sea never made a skilled sailor.";;
+        5) quote="Cowards never start, the weaks never finish, winners never quit.";;
+        6) quote="If no one comes from the future to stop you from doing it, then how bad of a decision can it really be?";;
+        7) quote="Do something today that your future self will thank you for.";;
+        8) quote="How many mondays have been and gone since you said 'i will start next week'? Take action, start today.";;
+        9) quote="Discipline is doing what needs to be done even though you don't want to.";;
+        10) quote="If you are unwilling to risk the unusual, you will have to settle for the ordinary.";;
+	11) quote="What I'm NOT going to do today?";;
+	12) quote="If I live every day the same way I did what kind of future would that create?";;
+        13) quote="We must all suffer one of two pains: The pain of discipline or the pain of regret";;
+        14) quote="It is not enough to stare up the steps; we must step up the stairs";;
+        13) quote="The winds and waves are always on the side of the ablest navigators";;
+	
+esac  # END CASE
+ 
+# Display the random quote from case statement, and format it to line wrap at 30 characters
+echo "$quote" | fmt -50
